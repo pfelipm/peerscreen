@@ -42,16 +42,18 @@ Por sencillez y para mantener la extensión gratuita, **no se utilizan servidore
 2.  Haz clic en "Añadir a Chrome".
 3.  ¡Listo! Ya puedes usar la extensión.
 
-### Opción 2: Desde el código fuente (Para desarrolladores)
+### Opción 2: Desde el código fuente (para desarrolladores y administrador TIC)
 
-1.  Descarga o clona este repositorio en tu máquina local:
+1.  Descarga y descomprime o clona este repositorio en tu máquina local:
     ```bash
     git clone https://github.com/pfelipm/peerscreen.git
     ```
 2.  Abre Google Chrome y ve a la página de extensiones: `chrome://extensions/`.
 3.  Activa el **"Modo de desarrollador"** en la esquina superior derecha.
 4.  Haz clic en el botón **"Cargar descomprimida"**.
-5.  Selecciona la carpeta del repositorio que acabas de clonar. La extensión se instalará localmente.
+5.  Selecciona la carpeta del repositorio que acabas de descargar o clonar. La extensión se instalará localmente.
+
+Esta opción puede facilitar el despliegue de la extensión en un aula en la que los ordenadores estén configurados para navegar de manera predeterminada en modo incógnito. En este caso, tras instalarla en el navegador de cada equipo, marca la opción **"Permitir en incógino"** en los ajustes de la extensión para que permanezca activa en ese modo.
 
 ---
 
