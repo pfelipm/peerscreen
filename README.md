@@ -33,7 +33,7 @@ Por sencillez y para mantener la extensión gratuita, **no se utilizan servidore
 
 ### Opción 1: Desde la Chrome Web Store (recomendado)
 
-1.  Visita la página de PeerScreen en la Chrome Web Store: **[ENLACE A LA CHROME WEB STORE]**
+1.  Visita la [página de PeerScreen](https://chromewebstore.google.com/detail/cpoommbndjmjochpijjobgmnbgbkikdn) en la Chrome Web Store.
 2.  Haz clic en "Añadir a Chrome".
 3.  ¡Listo! Ya puedes usar la extensión.
 
