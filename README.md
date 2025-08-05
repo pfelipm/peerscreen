@@ -1,6 +1,8 @@
 # PeerScreen
 
-![PeerScreen Banner](URL_DEL_BANNER_O_IMAGEN_PRINCIPAL)
+<p align="center">
+  <img src="./readme-files/ps-principal.png">
+</p>
 
 ## Descripción general
 
@@ -17,6 +19,8 @@ PeerScreen es una extensión para Google Chrome que te permite compartir tu pant
 * **Internacionalización:** Interfaz disponible en español e inglés. Detecta automáticamente el idioma del navegador y, además, permite al usuario forzar su preferencia.
 * **Arquitectura Moderna:** Desarrollada desde cero para ser compatible con Manifest V3 de Chrome.
 * **Ligera y Privada:** No requiere servicios de sincronización de Google y almacena las preferencias localmente.
+
+![PeerScreen Banner](/readme-files/ps-collage.png)
 
 ---
 
@@ -65,4 +69,4 @@ Se utilizan las siguientes bibliotecas de terceros:
 
 ## ✊ Licencia
 
-**[AQUÍ PUEDES PONER EL NOMBRE DE TU LICENCIA, POR EJEMPLO: MIT, GPL, ETC.]**
+Este proyecto se distribuye bajo los términos del archivo [LICENSE](/LICENSE).
