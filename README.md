@@ -53,4 +53,4 @@ Se utilizan las siguientes bibliotecas de terceros:
 
 ## ✊ Licencia
 
-**[AQUÍ PUEDES PONER EL NOMBRE DE TU LICENCIA, POR EJEMPLO: MIT, GPL, ETC.]**
+Este proyecto se distribuye bajo los términos del archivo [LICENSE](/LICENSE).
