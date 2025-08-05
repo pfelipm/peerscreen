@@ -1,6 +1,6 @@
 # PeerScreen
 
-PeerScreen es una extensión para Google Chrome que te permite compartir tu pantalla con otros usuarios de forma sencilla y segura. Utilizando la tecnología WebRTC, la conexión se establece directamente de navegador a navegador (peer-to-peer), garantizando una baja latencia y la máxima privacidad, ya que el vídeo no pasa por ningún servidor intermediario. La extensión, construida sobre la moderna arquitectura Manifest V3 de Chrome, genera un ID de sesión único y un código QR para que otros puedan unirse a tu retransmisión al instante.
+PeerScreen es una extensión para Google Chrome que te permite compartir tu pantalla con otros usuarios de forma sencilla y segura. Utilizando la tecnología WebRTC, la conexión se establece directamente de navegador a navegador (peer-to-peer), garantizando una baja latencia y la máxima privacidad, ya que el vídeo no pasa por ningún servidor intermedio. La extensión, construida sobre la moderna arquitectura Manifest V3 de Chrome, genera un ID de sesión único y un código QR para que otros usurios con la extensión también instalada puedan unirse a tu retransmisión al instante.
 
 <p align="center">
   <img src="./readme-files/ps-principal.png">
@@ -44,7 +44,7 @@ Por sencillez y para mantener la extensión gratuita, **no se utilizan servidore
 
 ### Opción 2: Desde el código fuente (Para desarrolladores)
 
-1.  Clona este repositorio en tu máquina local:
+1.  Descarga o clona este repositorio en tu máquina local:
     ```bash
     git clone https://github.com/pfelipm/peerscreen.git
     ```
