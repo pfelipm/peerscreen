@@ -4,19 +4,31 @@
 
 ## Descripción general
 
-PeerScreen es una extensión para Google Chrome que te permite compartir tu pantalla con otros usuarios de forma sencilla y segura. Utilizando la tecnología WebRTC, la conexión se establece directamente de navegador a navegador (peer-to-peer), garantizando una baja latencia y la máxima privacidad, ya que el vídeo no pasa por ningún servidor intermediario. La extensión, construida sobre la moderna arquitectura Manifest V3 de Chrome, genera un ID de sesión único y un código QR para que otros puedan unirse a tu retransmisión al instante. Es la herramienta perfecta para demostraciones rápidas, soporte técnico o colaboración en tiempo real sin necesidad de software de terceros.
+PeerScreen es una extensión para Google Chrome que te permite compartir tu pantalla con otros usuarios de forma sencilla y segura. Utilizando la tecnología WebRTC, la conexión se establece directamente de navegador a navegador (peer-to-peer), garantizando una baja latencia y la máxima privacidad, ya que el vídeo no pasa por ningún servidor intermediario. La extensión, construida sobre la moderna arquitectura Manifest V3 de Chrome, genera un ID de sesión único y un código QR para que otros puedan unirse a tu retransmisión al instante.
 
 ---
 
 ## ✨ Características Principales
 
-* **Conexión Segura P2P:** El streaming de vídeo se realiza directamente entre tu navegador y el de los espectadores gracias a WebRTC, sin servidores intermediarios.
+* **Conexión Segura P2P:** El streaming de vídeo se realiza directamente entre tu navegador y el de los espectadores gracias a WebRTC.
 * **Compartir con Facilidad:** Inicia una sesión y compártela al instante mediante un ID único o un código QR.
 * **Controles para el Anfitrión:** Pausa y reanuda la transmisión en cualquier momento.
 * **Soporte Multi-espectador:** Permite que varios usuarios se unan a la misma sesión (configurable por el anfitrión).
-* **Internacionalización:** Interfaz disponible en español e inglés, con un selector para forzar el idioma deseado.
+* **Internacionalización:** Interfaz disponible en español e inglés. Detecta automáticamente el idioma del navegador y, además, permite al usuario forzar su preferencia.
 * **Arquitectura Moderna:** Desarrollada desde cero para ser compatible con Manifest V3 de Chrome.
 * **Ligera y Privada:** No requiere servicios de sincronización de Google y almacena las preferencias localmente.
+
+---
+
+## 💡 Caso de Uso y Limitaciones
+
+**Caso de Uso Principal:**
+La extensión se ha diseñado de manera específica para funcionar de forma óptima en el contexto de un **aula de formación o una sala de reuniones**, permitiendo emitir la pantalla de un docente o ponente al resto de asistentes conectados a la **misma red local (WiFi)**.
+
+**Limitaciones de Conexión (NAT Traversal):**
+Por sencillez y para mantener la extensión gratuita, **no se utilizan servidores TURN**. Esto tiene una implicación importante:
+* ✅ La conexión funcionará sin problemas entre usuarios dentro de la misma red.
+* ❌ Es muy probable que la conexión **falle** si el emisor y el receptor se encuentran en redes diferentes y restrictivas (por ejemplo, dos redes de empresa distintas, o una red móvil y una red doméstica con NAT simétrico). Esto se debe a que sin un servidor TURN es muy difícil atravesar ciertos tipos de NAT.
 
 ---
 
@@ -53,4 +65,4 @@ Se utilizan las siguientes bibliotecas de terceros:
 
 ## ✊ Licencia
 
-Este proyecto se distribuye bajo los términos del archivo [LICENSE](/LICENSE).
+**[AQUÍ PUEDES PONER EL NOMBRE DE TU LICENCIA, POR EJEMPLO: MIT, GPL, ETC.]**
