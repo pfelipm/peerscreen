@@ -42,7 +42,7 @@ Por sencillez y para mantener la extensión gratuita, **no se utilizan servidore
 2.  Haz clic en "Añadir a Chrome".
 3.  ¡Listo! Ya puedes usar la extensión.
 
-### Opción 2: Desde el código fuente (para desarrolladores y administrador TIC)
+### Opción 2: Desde el código fuente (para desarrolladores y administradores TIC)
 
 1.  Descarga y descomprime o clona este repositorio en tu máquina local:
     ```bash
