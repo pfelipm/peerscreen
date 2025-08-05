@@ -6,7 +6,6 @@ PeerScreen es una extensión para Google Chrome que te permite compartir tu pant
   <img src="./readme-files/ps-principal.png">
 </p>
 
----
 
 ## ✨ Características Principales
 
@@ -20,8 +19,6 @@ PeerScreen es una extensión para Google Chrome que te permite compartir tu pant
 
 ![PeerScreen Banner](/readme-files/ps-collage.png)
 
----
-
 ## 💡 Caso de Uso y Limitaciones
 
 **Caso de Uso Principal:**
@@ -31,8 +28,6 @@ La extensión se ha diseñado de manera específica para funcionar de forma ópt
 Por sencillez y para mantener la extensión gratuita, **no se utilizan servidores TURN**. Esto tiene una implicación importante:
 * ✅ La conexión funcionará sin problemas entre usuarios dentro de la misma red.
 * ❌ Es muy probable que la conexión **falle** si el emisor y el receptor se encuentran en redes diferentes y restrictivas (por ejemplo, dos redes de empresa distintas, o una red móvil y una red doméstica con NAT simétrico). Esto se debe a que sin un servidor TURN es muy difícil atravesar ciertos tipos de NAT.
-
----
 
 ## 🚀 Instalación
 
@@ -55,8 +50,6 @@ Por sencillez y para mantener la extensión gratuita, **no se utilizan servidore
 
 Esta opción puede facilitar el despliegue de la extensión en un aula en la que los ordenadores estén configurados para navegar de manera predeterminada en modo incógnito. En este caso, tras instalarla en el navegador de cada equipo, marca la opción **"Permitir en incógnito"** en los ajustes de la extensión para que permanezca activa en este modo.
 
----
-
 ## 💙 Créditos
 
 Este proyecto ha sido creado y es mantenido por **[Pablo Felip](https://www.linkedin.com/in/pfelipm/)**.
@@ -64,8 +57,6 @@ Este proyecto ha sido creado y es mantenido por **[Pablo Felip](https://www.link
 Se utilizan las siguientes bibliotecas de terceros:
 * [PeerJS](https://peerjs.com/)
 * [QRCode.js](https://github.com/davidshimjs/qrcodejs)
-
----
 
 ## ✊ Licencia
 
