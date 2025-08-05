@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-title="appName"></title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <button id="lang-toggle-btn" data-i18n-title="lang_tooltip"></button>
+
+    <h1 class="main-title" data-i18n="appName"></h1>
+
+    <!-- MODO VISOR (inicialmente oculto) -->
+    <div id="viewer-mode-controls" class="card hidden">
+        <div id="viewer-mode-info">
+            <p data-i18n="viewerModeInfo"></p>
+            <p id="viewing-session-id"></p>
+        </div>
+        <button id="disconnect-viewer-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+            <span data-i18n="disconnectButton"></span>
+        </button>
+    </div>
+
+    <!-- MODO ANFITRIÓN / PREDETERMINADO -->
+    <div id="default-controls">
+        <div class="card">
+            <h2 data-i18n="shareTitle"></h2>
+            <div id="share-controls">
+                <input type="text" id="room-name-input" data-i18n-placeholder="roomNamePlaceholder">
+
+                <div class="setting-container">
+                    <label for="resolution-selector" data-i18n="resolutionLabel"></label>
+                    <select id="resolution-selector">
+                        <option value="native" data-i18n="resolutionNative"></option>
+                        <option value="1080">1080p</option>
+                        <option value="720">720p</option>
+                        <option value="480">480p</option>
+                    </select>
+                </div>
+
+                <div class="setting-container">
+                    <div class="slider-label">
+                        <span data-i18n="maxViewersLabel"></span>
+                        <span id="max-viewers-value">10</span>
+                    </div>
+                    <input type="range" id="max-viewers-slider" min="1" max="100" value="10">
+                </div>
+                <button id="start-share" class="btn-share">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 16V6h16v10.01L4 16z"/></svg>
+                    <span data-i18n="shareButton"></span>
+                </button>
+            </div>
+            <div id="session-active-controls" class="hidden">
+                <div class="viewer-count-container">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34-3-3-1.34-3-3-3z"/></svg>
+                    <span id="viewer-count-display">0 / 10</span>
+                </div>
+                 <div class="session-id-container">
+                    <span data-i18n="sessionIdLabel"></span>
+                    <div class="id-wrapper">
+                        <span id="peer-id-display"></span>
+                        <button id="copy-id-btn" data-i18n-title="copyIdTooltip">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="qr-code-container" class="hidden"></div>
+                <button id="present-btn" data-i18n-title="presentTooltip">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v-2H4V5h16v12h-4v2h4c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+                    <span data-i18n="presentButton"></span>
+                </button>
+                <div class="session-buttons-grid">
+                    <button id="pause-share-btn" class="btn-pause"></button>
+                    <button id="stop-share">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                        <span data-i18n="stopButton"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="join-section" class="card">
+            <h2 data-i18n="joinTitle"></h2>
+            <input type="text" id="remote-id-input" data-i18n-placeholder="remoteIdPlaceholder">
+            <button id="connect-viewer-btn" class="btn-join">
+                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span data-i18n="joinButton"></span>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <span class="footer-text" data-i18n="footerText"></span>
+    </footer>
+
+    <script src="libs/qrcode.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
