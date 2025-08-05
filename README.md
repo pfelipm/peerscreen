@@ -46,7 +46,7 @@ Por sencillez y para mantener la extensión gratuita, **no se utilizan servidore
 
 1.  Clona este repositorio en tu máquina local:
     ```bash
-    git clone [https://github.com/pfelipm/peerscreen.git](https://github.com/pfelipm/peerscreen.git)
+    git clone https://github.com/pfelipm/peerscreen.git
     ```
 2.  Abre Google Chrome y ve a la página de extensiones: `chrome://extensions/`.
 3.  Activa el **"Modo de desarrollador"** en la esquina superior derecha.
