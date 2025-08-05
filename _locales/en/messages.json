@@ -17,7 +17,7 @@
   "joinTitle": { "message": "Join a session" },
   "remoteIdPlaceholder": { "message": "Paste session ID" },
   "joinButton": { "message": "Join" },
-  "footerText": { "message": "Created with 🩵 by Pablo Felip | GitHub" },
+  "footerText": { "message": "Created with 🩵 by " },
   "viewerModeInfo": { "message": "You are viewing session:" },
   "disconnectButton": { "message": "Disconnect" },
   "viewerTitle": { "message": "Screen Viewer" },

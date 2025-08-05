@@ -20,6 +20,14 @@ footer {
     color: #8e8e93;
 }
 
+.footer-link {
+    color: #007aff; /* Color azul estándar para enlaces */
+    text-decoration: none;
+}
+.footer-link:hover {
+    text-decoration: underline;
+}
+
 #lang-toggle-btn {
     position: absolute;
     top: 16px;

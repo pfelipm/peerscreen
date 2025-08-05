@@ -17,7 +17,7 @@
   "joinTitle": { "message": "Unirse a una sesión" },
   "remoteIdPlaceholder": { "message": "Pegar ID de la sesión" },
   "joinButton": { "message": "Unirse" },
-  "footerText": { "message": "Creado con 🩵 por Pablo Felip | GitHub" },
+  "footerText": { "message": "Creado con 🩵 por " },
   "viewerModeInfo": { "message": "Estás viendo la sesión:" },
   "disconnectButton": { "message": "Desconectar" },
   "viewerTitle": { "message": "Visor de Pantalla" },
