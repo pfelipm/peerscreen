@@ -10,15 +10,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Lógica de Internacionalización (i18n) ---
     function getMsg(key, substitutions) {
-        // Si hemos cargado un archivo de idioma personalizado, lo usamos
         if (customMessages && customMessages[key]) {
             return customMessages[key].message;
         }
-        // Si no, usamos la API estándar de Chrome
         return chrome.i18n.getMessage(key, substitutions);
     }
 
-    function setLocaleStrings() {
+    async function applyTranslations() {
+        const { userLanguage = 'auto' } = await chrome.storage.local.get('userLanguage');
+
+        customMessages = null;
+        if (userLanguage !== 'auto') {
+            try {
+                const response = await fetch(`/_locales/${userLanguage}/messages.json`);
+                if (response.ok) {
+                    customMessages = await response.json();
+                }
+            } catch (error) {
+                console.error(`Error fetching language file:`, error);
+            }
+        }
+
         document.title = getMsg('viewerTitle');
         document.querySelectorAll('[data-i18n]').forEach(elem => {
             const key = elem.getAttribute('data-i18n');
@@ -82,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 call.on('close', () => {
                     cleanup();
-                    // Solo muestra el mensaje si la sesión no estaba ya llena
                     if (!statusMessage.textContent.includes(getMsg('errorSessionFull'))) {
                         document.body.innerHTML = `<h1>${getMsg('sessionEnded')}</h1>`;
                     }
@@ -105,30 +116,17 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('beforeunload', cleanup);
     }
 
-    // --- Función de Inicialización ---
+    // --- Función de Inicialización y Oyente de Cambios ---
     const initialize = async () => {
-        // 1. Comprobar si el usuario ha forzado un idioma
-        const { userLanguage = 'auto' } = await chrome.storage.local.get('userLanguage');
-
-        // 2. Si ha forzado uno, cargar el archivo JSON correspondiente
-        if (userLanguage !== 'auto') {
-            try {
-                const response = await fetch(`/_locales/${userLanguage}/messages.json`);
-                if (response.ok) {
-                    customMessages = await response.json();
-                } else {
-                    console.error(`Could not load language file for: ${userLanguage}`);
-                }
-            } catch (error) {
-                console.error(`Error fetching language file:`, error);
-            }
-        }
-
-        // 3. Aplicar los textos a la página
-        setLocaleStrings();
-        // 4. Iniciar la lógica principal de la página
+        await applyTranslations();
         startViewerLogic();
     };
+
+    chrome.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'local' && changes.userLanguage) {
+            applyTranslations();
+        }
+    });
 
     initialize();
 });
