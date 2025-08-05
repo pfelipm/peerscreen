@@ -47,6 +47,7 @@ Por sencillez y para mantener la extensión gratuita, **no se utilizan servidore
 3.  Activa el **"Modo de desarrollador"** en la esquina superior derecha.
 4.  Haz clic en el botón **"Cargar descomprimida"**.
 5.  Selecciona la carpeta del repositorio que acabas de descargar o clonar. La extensión se instalará localmente.
+6. ¡Listo! El icono de la extensión aparecerá en tu barra de extensiones, te sugiero que lo fijes a ella para usarlo con mayor comodidad.
 
 Esta opción puede facilitar el despliegue de la extensión en un aula en la que los ordenadores estén configurados para navegar de manera predeterminada en modo incógnito. En este caso, tras instalarla en el navegador de cada equipo, marca la opción **"Permitir en incógnito"** en los ajustes de la extensión para que permanezca activa en este modo.
 
