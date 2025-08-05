@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Visor de Pantalla</title>
+    <title>__MSG_viewerTitle__</title>
     <link rel="stylesheet" href="viewer.css">
 </head>
 <body>
@@ -12,10 +12,10 @@
             <div class="pause-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
             </div>
-            <p>La transmisión está en pausa</p>
+            <p data-i18n="streamPaused">La transmisión está en pausa</p>
         </div>
     </div>
-    <div id="status-message">Conectando...</div>
+    <div id="status-message" data-i18n="viewerConnecting">Conectando...</div>
 
     <script src="libs/peerjs.min.js"></script>
     <script src="viewer.js"></script>
