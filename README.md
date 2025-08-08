@@ -21,13 +21,13 @@ PeerScreen es una extensión para Google Chrome que te permite compartir tu pant
 
 ## 💡 Caso de Uso y Limitaciones
 
-**Caso de Uso Principal:**
+**Caso de uso principal:**
 La extensión se ha diseñado de manera específica para funcionar de forma óptima en el contexto de un **aula de formación o una sala de reuniones**, permitiendo emitir la pantalla de un docente, ponente o estudiante al resto de asistentes conectados a la **misma red local (cableada o WiFi)**.
 
-**Limitaciones de Conexión (NAT Traversal):**
+**Limitaciones de conexión (NAT Traversal):**
 Por sencillez y para mantener la extensión gratuita, **no se utilizan servidores TURN**. Esto tiene una implicación importante:
 * ✅ La conexión funcionará sin problemas entre usuarios dentro de la misma red.
-* ❌ Es muy probable que la conexión **falle** si el emisor y el receptor se encuentran en redes diferentes y restrictivas (por ejemplo, dos redes de empresa distintas, o una red móvil y una red doméstica con NAT simétrico). Esto se debe a que sin un servidor TURN es muy difícil atravesar ciertos tipos de NAT.
+* ❌ Es muy probable que la conexión **falle** si el emisor y el receptor se encuentran en redes diferentes y **restrictivas** (por ejemplo, dos redes de empresa distintas, o una red móvil y una red doméstica con NAT simétrico). Esto se debe a que sin un servidor TURN es muy difícil atravesar ciertos tipos de NAT.
 
 ## 🚀 Instalación
 
