@@ -93,8 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Lógica de generación de código ---
     const generateShortCode = () => {
-        return Math.random().toString(36).substring(2, 6).toUpperCase() + '-' +
-               Math.random().toString(36).substring(2, 6).toUpperCase();
+        const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // Excluye 0, O, 1, I
+        let code = '';
+        for (let i = 0; i < 4; i++) {
+            code += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        }
+        code += '-';
+        for (let i = 0; i < 4; i++) {
+            code += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        }
+        return code;
     };
 
     // --- Lógica de ajustes ---

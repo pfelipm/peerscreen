@@ -116,7 +116,16 @@ button:disabled {
 
 .session-id-container { margin-top: 16px; font-size: 13px; }
 .id-wrapper { display: flex; align-items: center; justify-content: space-between; background-color: #f0f0f0; border-radius: 6px; padding: 8px 12px; margin-top: 8px; }
-#peer-id-display { font-family: monospace; user-select: all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#peer-id-display {
+    font-family: 'Consolas', 'Monaco', 'Menlo', 'Cascadia Code', 'Source Code Pro', monospace;
+    font-variant-numeric: slashed-zero;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    user-select: all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 #copy-id-btn { background: none; border: none; cursor: pointer; padding: 4px; border-radius: 4px; width: auto; flex-shrink: 0; }
 #copy-id-btn:hover { background-color: #ddd; }
 .viewer-count-container { display: flex; align-items: center; justify-content: center; gap: 6px; background-color: #e9e9eb; color: #333; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin-bottom: 16px; }
@@ -124,4 +133,10 @@ button:disabled {
 .hidden { display: none; }
 #qr-code-container { margin-top: 12px; padding: 12px; background-color: white; border-radius: 8px; display: flex; justify-content: center; align-items: center; border: 1px solid #e5e5ea; }
 #viewer-mode-info { text-align: center; font-size: 14px; }
-#viewing-session-id { font-weight: 600; font-family: monospace; word-break: break-all; }
+#viewing-session-id {
+    font-family: 'Consolas', 'Monaco', 'Menlo', 'Cascadia Code', 'Source Code Pro', monospace;
+    font-variant-numeric: slashed-zero;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    word-break: break-all;
+}
