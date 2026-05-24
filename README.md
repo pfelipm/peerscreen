@@ -61,9 +61,13 @@ PeerScreen permite a los administradores de TI restringir funcionalidades median
 Para desactivar la capacidad de compartir pantalla en una unidad organizativa (UO) específica:
 
 1.  En la consola de administración de Google, ve a **Dispositivos > Chrome > Aplicaciones y extensiones > Usuarios y navegadores**.
-2.  Selecciona la UO (ej: Alumnado) y busca la extensión PeerScreen.
-3.  En el panel de configuración de la derecha, busca el campo **Configuración de la política de la extensión** (JSON).
-4.  Pega el siguiente código JSON:
+2.  Selecciona la UO deseada (ej: Alumnado).
+3.  Haz clic en el botón amarillo con el símbolo **"+"** (esquina inferior derecha) y elige una de estas dos opciones:
+    *   **Añadir desde Chrome Web Store**: Busca la extensión por el nombre "PeerScreen".
+    *   **Añadir extensión de Chrome por ID**: Selecciona la opción "Desde Chrome Web Store" y pega el ID oficial: `cpoommbndjmjochpijjobgmnbgbkikdn`.
+4.  Una vez añadida, haz clic sobre la extensión en el listado para abrir su panel de ajustes a la derecha.
+5.  Busca el campo **Configuración de la política de la extensión** (JSON).
+6.  Pega el siguiente código JSON:
 
 ```json
 {
