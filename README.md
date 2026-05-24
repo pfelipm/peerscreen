@@ -1,13 +1,13 @@
 # PeerScreen
 
-PeerScreen es una extensión para Google Chrome que te permite compartir tu pantalla con otros usuarios de forma sencilla y segura. Utilizando la tecnología WebRTC, la conexión se establece directamente de navegador a navegador (peer-to-peer), garantizando una baja latencia y la máxima privacidad, ya que el vídeo no pasa por ningún servidor intermedio. La extensión, construida sobre la moderna arquitectura Manifest V3 de Chrome, genera un ID de sesión único y un código QR para que otros usurios con la extensión también instalada puedan unirse a tu retransmisión al instante.
+PeerScreen es una extensión para Google Chrome que te permite compartir tu pantalla con otros usuarios de forma sencilla y segura. Utilizando la tecnología WebRTC, la conexión se establece directamente de navegador a navegador (peer-to-peer), garantizando una baja latencia y la máxima privacidad, ya que el vídeo no pasa por ningún servidor intermedio. La extensión, construida sobre la moderna arquitectura Manifest V3 de Chrome, genera un ID de sesión único y un código QR para que otros usuarios con la extensión también instalada puedan unirse a tu retransmisión al instante.
 
 <p align="center">
   <img src="./readme-files/ps-principal.png">
 </p>
 
 
-## ✨ Características Principales
+## ✨ Características principales
 
 * **Conexión segura P2P:** El streaming de vídeo se realiza directamente entre tu navegador y el de los espectadores gracias a WebRTC.
 * **Compartir con facilidad:** Inicia una sesión y compártela al instante mediante un ID único o un código QR. Los espectadores se unirán utilizando también la extensión.
@@ -19,7 +19,7 @@ PeerScreen es una extensión para Google Chrome que te permite compartir tu pant
 
 ![PeerScreen Banner](/readme-files/ps-collage.png)
 
-## 💡 Caso de Uso y Limitaciones
+## 💡 Caso de uso y limitaciones
 
 **Caso de uso principal:**
 La extensión se ha diseñado de manera específica para funcionar de forma óptima en el contexto de un **aula de formación o una sala de reuniones**, permitiendo emitir la pantalla de un docente, ponente o estudiante al resto de asistentes conectados a la **misma red local (cableada o WiFi)**.
@@ -51,29 +51,15 @@ Por sencillez y para mantener la extensión gratuita, **no se utilizan servidore
 
 Esta opción puede facilitar el despliegue de la extensión en un aula en la que los ordenadores estén configurados para navegar de manera predeterminada en modo incógnito. En este caso, tras instalarla en el navegador de cada equipo, marca la opción **"Permitir en incógnito"** en los ajustes de la extensión para que permanezca activa en este modo.
 
-## 💙 Créditos
+## 🏢 Configuración para administradores (Google Workspace)
 
-Este proyecto ha sido creado y es mantenido por **[Pablo Felip](https://www.linkedin.com/in/pfelipm/)**.
+PeerScreen permite a los administradores de TI restringir funcionalidades mediante **políticas administradas de Chrome**. Esto es ideal para entornos educativos donde se desea que los alumnos solo puedan unirse a sesiones y no emitir.
 
-Se utilizan las siguientes bibliotecas de terceros:
-* [PeerJS](https://peerjs.com/)
-* [QRCode.js](https://github.com/davidshimjs/qrcodejs)
+### Modo "solo visor" (restricción de emisión)
 
-## ✊ Licencia
+Para desactivar la capacidad de compartir pantalla en una unidad organizativa (UO) específica:
 
-Este proyecto se distribuye bajo los términos del archivo [LICENSE](/LICENSE).
-
----
-
-## 🏢 Configuración para Administradores (Google Workspace)
-
-PeerScreen permite a los administradores de TI restringir funcionalidades mediante **Políticas Administradas de Chrome**. Esto es ideal para entornos educativos donde se desea que los alumnos solo puedan unirse a sesiones y no emitir.
-
-### Modo "Solo Visor" (Restricción de Emisión)
-
-Para desactivar la capacidad de compartir pantalla en una Unidad Organizativa (UO) específica:
-
-1.  En la Consola de Administración de Google, ve a **Dispositivos > Chrome > Aplicaciones y extensiones > Usuarios y navegadores**.
+1.  En la consola de administración de Google, ve a **Dispositivos > Chrome > Aplicaciones y extensiones > Usuarios y navegadores**.
 2.  Selecciona la UO (ej: Alumnado) y busca la extensión PeerScreen.
 3.  En el panel de configuración de la derecha, busca el campo **Configuración de la política de la extensión** (JSON).
 4.  Pega el siguiente código JSON:
@@ -87,3 +73,17 @@ Para desactivar la capacidad de compartir pantalla en una Unidad Organizativa (U
 ```
 
 Al aplicar esto, la interfaz de "Compartir pantalla" desaparecerá de la extensión para esos usuarios, dejando únicamente visible la sección de "Unirse a una sesión".
+
+## 💙 Créditos
+
+Este proyecto ha sido creado y es mantenido por **[Pablo Felip](https://www.linkedin.com/in/pfelipm/)**.
+
+Agradecimiento especial a **[Toño Gutiérrez](https://transformacioneducativa.es/equipo-coordinacion/)**, del equipo de coordinación de GEG Spain, por su valiosa sugerencia de limitar la compartición de pantalla para el alumnado.
+
+Se utilizan las siguientes bibliotecas de terceros:
+* [PeerJS](https://peerjs.com/)
+* [QRCode.js](https://github.com/davidshimjs/qrcodejs)
+
+## ✊ Licencia
+
+Este proyecto se distribuye bajo los términos del archivo [LICENSE](/LICENSE).
