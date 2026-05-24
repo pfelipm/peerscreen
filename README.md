@@ -68,8 +68,8 @@ Para desactivar la capacidad de compartir pantalla en una unidad organizativa (U
   <img src="./readme-files/anadir-workspace.png" width="100">
 </p>
 
-    *   **Añadir desde Chrome Web Store**: Busca la extensión por el nombre "PeerScreen".
-    *   **Añadir extensión de Chrome por ID**: Selecciona la opción "Desde Chrome Web Store" y pega el ID oficial: `cpoommbndjmjochpijjobgmnbgbkikdn`.
+*   **Añadir desde Chrome Web Store**: Busca la extensión por el nombre "PeerScreen".
+*   **Añadir extensión de Chrome por ID**: Selecciona la opción "Desde Chrome Web Store" y pega el ID oficial: `cpoommbndjmjochpijjobgmnbgbkikdn`.
 4.  Una vez añadida, haz clic sobre la extensión en el listado para abrir su panel de ajustes a la derecha.
 5.  Busca el campo **Configuración de la política de la extensión** (JSON).
 6.  Pega el siguiente código JSON:
