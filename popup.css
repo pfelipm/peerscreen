@@ -60,6 +60,11 @@ footer {
 h2 { font-size: 16px; margin-top: 0; margin-bottom: 16px; text-align: left; }
 button { width: 100%; padding: 10px; border: none; border-radius: 6px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background-color 0.2s, opacity 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
 button svg { width: 16px; height: 16px; }
+#remote-id-input {
+    font-family: 'Consolas', 'Monaco', 'Menlo', 'Cascadia Code', 'Source Code Pro', monospace;
+    font-variant-numeric: slashed-zero;
+    font-weight: 500;
+}
 input[type="text"], select {
     width: 100%;
     padding: 10px;
