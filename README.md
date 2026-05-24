@@ -82,13 +82,13 @@ Para desactivar la capacidad de compartir pantalla en una unidad organizativa (U
 }
 ```
 
-Al aplicar esto, la interfaz de "Compartir pantalla" desaparecerá de la extensión para esos usuarios, dejando únicamente visible la sección de "Unirse a una sesión".
-
 <p align="center">
   <img src="./readme-files/politica-extension.png" width="500">
   <br>
   <em>Configuración de la política en la consola de Google Workspace</em>
 </p>
+
+Al aplicar esto, la interfaz de "Compartir pantalla" desaparecerá de la extensión para esos usuarios, dejando únicamente visible la sección de "Unirse a una sesión".
 
 <p align="center">
   <img src="./readme-files/ps-principal-sin-compartir.png" width="300">
