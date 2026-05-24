@@ -63,6 +63,11 @@ Para desactivar la capacidad de compartir pantalla en una unidad organizativa (U
 1.  En la consola de administración de Google, ve a **Dispositivos > Chrome > Aplicaciones y extensiones > Usuarios y navegadores**.
 2.  Selecciona la UO deseada (ej: Alumnado).
 3.  Haz clic en el botón amarillo con el símbolo **"+"** (esquina inferior derecha) y elige una de estas dos opciones:
+
+<p align="center">
+  <img src="./readme-files/anadir-workspace.png" width="100">
+</p>
+
     *   **Añadir desde Chrome Web Store**: Busca la extensión por el nombre "PeerScreen".
     *   **Añadir extensión de Chrome por ID**: Selecciona la opción "Desde Chrome Web Store" y pega el ID oficial: `cpoommbndjmjochpijjobgmnbgbkikdn`.
 4.  Una vez añadida, haz clic sobre la extensión en el listado para abrir su panel de ajustes a la derecha.
