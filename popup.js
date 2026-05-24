@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     remoteIdInput.addEventListener('input', () => {
+        remoteIdInput.value = remoteIdInput.value.toUpperCase();
         connectViewerBtn.disabled = !remoteIdInput.value.trim();
     });
 
