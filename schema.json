@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "allowSharing": {
+      "type": "boolean",
+      "title": "Permitir compartir pantalla",
+      "description": "Si se desactiva, los usuarios solo podrán unirse a sesiones existentes y no podrán crear las suyas propias.",
+      "default": true
+    }
+  }
+}

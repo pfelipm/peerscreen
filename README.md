@@ -62,3 +62,28 @@ Se utilizan las siguientes bibliotecas de terceros:
 ## ✊ Licencia
 
 Este proyecto se distribuye bajo los términos del archivo [LICENSE](/LICENSE).
+
+---
+
+## 🏢 Configuración para Administradores (Google Workspace)
+
+PeerScreen permite a los administradores de TI restringir funcionalidades mediante **Políticas Administradas de Chrome**. Esto es ideal para entornos educativos donde se desea que los alumnos solo puedan unirse a sesiones y no emitir.
+
+### Modo "Solo Visor" (Restricción de Emisión)
+
+Para desactivar la capacidad de compartir pantalla en una Unidad Organizativa (UO) específica:
+
+1.  En la Consola de Administración de Google, ve a **Dispositivos > Chrome > Aplicaciones y extensiones > Usuarios y navegadores**.
+2.  Selecciona la UO (ej: Alumnado) y busca la extensión PeerScreen.
+3.  En el panel de configuración de la derecha, busca el campo **Configuración de la política de la extensión** (JSON).
+4.  Pega el siguiente código JSON:
+
+```json
+{
+  "allowSharing": {
+    "Value": false
+  }
+}
+```
+
+Al aplicar esto, la interfaz de "Compartir pantalla" desaparecerá de la extensión para esos usuarios, dejando únicamente visible la sección de "Unirse a una sesión".

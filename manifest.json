@@ -12,6 +12,9 @@
   "background": {
     "service_worker": "service-worker.js"
   },
+  "storage": {
+    "managed_schema": "schema.json"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_title": "__MSG_appName__"

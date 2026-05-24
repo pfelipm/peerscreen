@@ -32,6 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const remoteIdInput = document.getElementById('remote-id-input');
     const roomNameInput = document.getElementById('room-name-input');
 
+    // --- Lógica de Políticas Administradas ---
+    const checkManagedPolicies = () => {
+        chrome.storage.managed.get(['allowSharing'], (result) => {
+            if (chrome.runtime.lastError) return;
+            if (result.allowSharing === false) {
+                // Ocultar la sección de compartir
+                const shareCard = document.querySelector('#default-controls > .card:first-child');
+                if (shareCard) {
+                    shareCard.classList.add('hidden');
+                }
+            }
+        });
+    };
+
     // --- Lógica de Internacionalización (i18n) ---
     function getMsg(key, substitutions) {
         if (customMessages && customMessages[key]) {
@@ -101,6 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
     maxViewersSlider.addEventListener('input', () => { maxViewersValue.textContent = maxViewersSlider.value; });
     maxViewersSlider.addEventListener('change', saveSettings);
     roomNameInput.addEventListener('change', saveSettings);
+
+    // Inicialización
+    checkManagedPolicies();
 
     // --- Lógica de UI ---
     const showViewerUI = (sessionId) => {
