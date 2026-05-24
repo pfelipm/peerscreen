@@ -78,7 +78,7 @@ Al aplicar esto, la interfaz de "Compartir pantalla" desaparecerá de la extensi
 
 Este proyecto ha sido creado y es mantenido por **[Pablo Felip](https://www.linkedin.com/in/pfelipm/)**.
 
-Agradecimiento especial a **[Toño Gutiérrez](https://transformacioneducativa.es/equipo-coordinacion/)**, del equipo de coordinación de GEG Spain, por su valiosa sugerencia de limitar la compartición de pantalla para el alumnado.
+Agradecimiento especial a **[Toño Gutiérrez](https://transformacioneducativa.es/equipo-coordinacion/)**, del equipo de coordinación de GEG Spain, por sus valiosas sugerencias relativas a limitar la compartición de pantalla para el alumnado, así como por proponer el uso exclusivo de mayúsculas y la eliminación de caracteres ambiguos (0, O, 1, I) para facilitar la conexión de los estudiantes.
 
 Se utilizan las siguientes bibliotecas de terceros:
 * [PeerJS](https://peerjs.com/)
