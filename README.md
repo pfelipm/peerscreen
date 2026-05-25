@@ -11,6 +11,13 @@ PeerScreen es una extensión para Google Chrome que te permite compartir tu pant
 
 * **Conexión segura P2P:** El streaming de vídeo se realiza directamente entre tu navegador y el de los espectadores gracias a WebRTC.
 * **Compartir con facilidad:** Inicia una sesión y compártela al instante mediante un ID único o un código QR. Los espectadores se unirán utilizando también la extensión.
+
+<p align="center">
+  <img src="./readme-files/ps-info-sesion.png" width="300">
+  <br>
+  <em>Panel de la extensión con una sesión de emisión activa</em>
+</p>
+
 * **Controles para el anfitrión:** Pausa y reanuda la transmisión en cualquier momento.
 * **Soporte multi-espectador:** Permite que varios usuarios se unan a la misma sesión. El anfitrión puede establecer el número máximo de espectadores desde la interfaz.
 * **Gestión centralizada (Google Workspace):** Permite a los administradores de TI desactivar la capacidad de compartir pantalla en unidades organizativas (UO) específicas mediante políticas de Chrome, ideal para entornos donde los alumnos solo deben actuar como espectadores.
